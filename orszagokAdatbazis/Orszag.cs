@@ -11,7 +11,7 @@ namespace orszagokAdatbazis
         public string OrszagNeve { get; set; }
         public string Fovaros { get; set; }
         public string FoldrajziHely { get; set; }
-        public int Terulet { get; set; }
+        public double Terulet { get; set; }
         public string Allamforma { get; set; }
         public int Nepesseg { get; set; }
         public int FovarosNepesseg { get; set; }
@@ -30,7 +30,7 @@ namespace orszagokAdatbazis
             this.OrszagNeve = on;
             this.Fovaros = fv;
             this.FoldrajziHely = fh;
-            this.Terulet = Int32.Parse(ter);
+            this.Terulet = Double.Parse(ter);
             this.Allamforma = af;
             this.Nepesseg = Int32.Parse(nep);
             this.FovarosNepesseg = Int32.Parse(fn);

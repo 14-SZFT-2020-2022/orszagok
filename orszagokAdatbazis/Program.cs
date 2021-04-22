@@ -35,12 +35,9 @@ namespace orszagokAdatbazis
             }
             */
 
-            MySqlDataReader mdr = new Feladat().FeladatMegoldas(conn);
-
-            while (mdr.Read())
-            {
-                Console.WriteLine($"{mdr.GetValue(0)}, {mdr.GetValue(1)}, {mdr.GetValue(2)}");
-            }
+            List<Orszag> lista = new Feladat().FeladatMegoldas(conn);
+            new Feladat1().FeladatMegoldasL(lista);
+            new Feladat2().FeladatMegoldasL(lista);
 
             conn.Close();
 
