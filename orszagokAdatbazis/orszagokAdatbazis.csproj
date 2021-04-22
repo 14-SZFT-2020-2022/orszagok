@@ -48,6 +48,7 @@
     <Compile Include="Feladatok\Feladat.cs" />
     <Compile Include="Feladatok\Feladat1.cs" />
     <Compile Include="Feladatok\Feladat2.cs" />
+    <Compile Include="Feladatok\Feladat3.cs" />
     <Compile Include="Orszag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

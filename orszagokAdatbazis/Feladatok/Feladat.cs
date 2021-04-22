@@ -37,6 +37,8 @@ namespace orszagokAdatbazis.Feladatok
                 lista.Add(orszag);
             }
 
+            mdr.Close();
+
             return lista;
         }
     }
