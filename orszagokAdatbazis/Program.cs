@@ -15,15 +15,32 @@ namespace orszagokAdatbazis
         {
             Csatlakozas csatlakozas = new Csatlakozas("orszagok");
             MySqlConnection conn = csatlakozas.Felcsatlakozas();
+            /*
+            MySqlDataReader mdr_1 = new Feladat1().FeladatMegoldas(conn);
 
-            Feladat1 elso = new Feladat1();
-            MySqlDataReader mdr = elso.FeladatMegoldas(conn);
+            while (mdr_1.Read())
+            {
+                Console.WriteLine(mdr_1.GetValue(0));
+            }
+
+            mdr_1.Close();
+
+            MySqlDataReader mdr_2 = new Feladat2().FeladatMegoldas(conn);
+
+            Console.WriteLine($"{mdr_2.GetName(0),-15} {mdr_2.GetName(1)}");
+
+            while (mdr_2.Read())
+            {
+                Console.WriteLine($"{mdr_2.GetValue(0), -15} {mdr_2.GetValue(1)}");
+            }
+            */
+
+            MySqlDataReader mdr = new Feladat().FeladatMegoldas(conn);
 
             while (mdr.Read())
             {
-                Console.WriteLine(mdr.GetValue(0));
+                Console.WriteLine($"{mdr.GetValue(0)}, {mdr.GetValue(1)}, {mdr.GetValue(2)}");
             }
-
 
             conn.Close();
 

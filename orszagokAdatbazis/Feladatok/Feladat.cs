@@ -3,13 +3,11 @@ using MySql.Data.MySqlClient;
 
 namespace orszagokAdatbazis.Feladatok
 {
-    class Feladat1
+    class Feladat
     {
         public MySqlDataReader FeladatMegoldas(MySqlConnection conn)
         {
-            Console.WriteLine("1. Feladat: Mi MADAGASZKÁR fővárosa?");
-
-            string sql = "SELECT `fovaros` FROM `orszagok` WHERE `orszag` = \"Madagaszkár\";";
+            string sql = "SELECT * FROM `orszagok`;";
 
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader mdr = cmd.ExecuteReader();
