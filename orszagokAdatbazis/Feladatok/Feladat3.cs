@@ -10,7 +10,7 @@ namespace orszagokAdatbazis.Feladatok
         {
             Console.WriteLine("3. Feladat: Melyik három ország területe a legkisebb?");
 
-            string sql = "SELECT `orszag` AS `Orszag`, `terulet` AS `Terulet km^2` FROM `orszagok` ";
+            string sql = "SELECT `orszag` AS `Ország`, `terulet` AS `Terület km^2` FROM `orszagok` ";
             sql += "ORDER BY `terulet` LIMIT 3; ";
 
             MySqlCommand cmd = new MySqlCommand(sql, conn);

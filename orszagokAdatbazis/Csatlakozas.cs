@@ -15,7 +15,7 @@ namespace orszagokAdatbazis
 
         public MySqlConnection Felcsatlakozas()
         {
-            string kapcsolodo = $"server=localhost;port=3307;username=root;password=;database={this.Adatbazis}";
+            string kapcsolodo = $"server=localhost;port=3307;username=root;password=;charset=utf8;database={this.Adatbazis}";
             MySqlConnection conn = new MySqlConnection(kapcsolodo);
 
             try
